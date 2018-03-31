@@ -8,9 +8,9 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
-    <input class="visually-hidden" type="radio" id="product-2" name="toggle">
-    <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+    <input class="visually-hidden slide-product-1" type="radio" id="product-1" name="toggle" checked>
+    <input class="visually-hidden slide-product-2" type="radio" id="product-2" name="toggle">
+    <input class="visually-hidden slide-product-3" type="radio" id="product-3" name="toggle">
     <div class="site-wrapper">
       <div class="site-wrapper-container">
         <header class="main-header">
@@ -42,17 +42,17 @@
               <div class="login">
                 <a class="menu-login" href="#">Вход</a>
                 <div class="active-login-form">
-                <div class="login-form">
-                  <label for="login-form-email" class="visually-hidden"></label>
-                  <input id="login-form-email" type="email" name="email" placeholder="Электронная почта" required>
-                  <label for="login-form-password" class="visually-hidden"></label>
-                  <input id="login-form-password" type="password" name="password" placeholder="Пароль" required>
-                  <button class="button login-form-button" type="submit">Войти</button>
-                  <div class="login-link">
-                    <a class="link-title" href="#">Забыли пароль?</a>
-                    <a class="link-title" href="#">Новая регистрация</a>
+                  <div class="login-form">
+                    <label for="login-form-email" class="visually-hidden"></label>
+                    <input id="login-form-email" type="email" name="email" placeholder="Электронная почта" required>
+                    <label for="login-form-password" class="visually-hidden"></label>
+                    <input id="login-form-password" type="password" name="password" placeholder="Пароль" required>
+                    <button class="button login-form-button" type="submit">Войти</button>
+                    <div class="login-link">
+                      <a class="link-title" href="#">Забыли пароль?</a>
+                      <a class="link-title" href="#">Новая регистрация</a>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
               <div class="busket">
@@ -73,35 +73,33 @@
               <label for="product-3">Третий</label>
             </div>
             <ul class="slider-list">
-              <li class="slider-item slide" id="slide1">
+              <li class="slider-item slide slide1" id="slide1">
                 <p class="slide-title">Крем-брюле и пломбир с малиновым джемом</p>
                 <a class="button slide-button" href="#">Давайте оба!</a>
               </li>
-              <li class="slider-item slide" id="slide2">
+              <li class="slider-item slide slide2" id="slide2">
                 <p class="slide-title">Шоколадный пломбир и лимонный сорбет</p>
                 <a class="button slide-button" href="#">Давайте оба!</a>
               </li>
-              <li class="slider-item slide" id="slide3">
+              <li class="slider-item slide slide3" id="slide3">
                 <p class="slide-title">Пломбир с помадкой и клубничный щербет</p>
                 <a class="button slide-button" href="#">Давайте оба!</a>
               </li>
             </ul>
           </div>
         </section>
-        </div>
+      </div>
         <main>   
           <section class="gift">
             <div class="container">
               <div class="gift-item rusberry">
                 <h3>Малинка даром!</h3>
-                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.
-                </p>
+                <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
                 <a class="button gift-button" href="#">Хочу варенье!</a>
               </div>
               <div class="gift-item chocolate">
                 <h3>Шоколадки даром!</h3>
-                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.
-                </p>
+                <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
                 <a class="button gift-button" href="#">Хочу шоколадки!</a>
               </div>
             </div>
@@ -216,8 +214,8 @@
               </div>  
             </div>
             <div class="contact-map">
-            <iframe src="https://yandex.ru/map-widget/v1/-/CBe~5Du21B" width="100%" height="430" frameborder="0"></iframe>
-            <img src="img/map_wt_pin.jpg" width="1200px" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <iframe src="https://yandex.ru/map-widget/v1/-/CBe~5Du21B"></iframe>
+            <img src="img/map_wt_pin.jpg" width="1200" height="430" alt="ул. Большая Конюшенная 19/8, Санкт-Петербург">
             </div>
           </section>
         </main>
