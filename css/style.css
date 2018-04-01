@@ -77,6 +77,18 @@ img {
   cursor: pointer;
 }
 
+.slider-controls label:hover {
+  background-color: rgba(248, 247, 244, 0.4);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
+.slider-controls label:active {
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+}
+
 .slider-controls {
   position: absolute;
   bottom: 23px;
@@ -416,6 +428,21 @@ span.item-text {
   font-size: 14px;
 }
 
+.search-form  input:hover,
+.login-form input:hover,
+.subscribe-form input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding: 14px;
+}
+
+.search-form input:focus,
+.login-form input:focus,
+.subscribe-form input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding: 14px;
+}
+
 .login {
   position: relative;
   padding-bottom: 5px;
@@ -702,6 +729,7 @@ a.menu-busket-active {
 .table-item .icecream-type {
   display: block;
   padding-top: 13px;
+  padding-right: 30px;
   margin: 0;
 }
 
@@ -753,21 +781,25 @@ a.menu-busket-active {
 .gift .container {
   max-width: 1200px;
   box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0 27px;
-  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 27px;
+  vertical-align: top;
 }
 
 .gift-item {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
-  align-items: center;
+  align-items: flex-start;
   max-width: 560px;
   min-height: 229px;
-  padding: 20px;
+  padding-top: 17px;
+  padding-left: 19px;
+  padding-right: 20px;
+  padding-bottom: 23px;
 
   background-color: rgb(255, 255, 255);
   border: none;
@@ -791,21 +823,24 @@ a.menu-busket-active {
 }
 
 .rusberry {
+  background-color: #9d0025;
   background-image: url("../img/bg_rusberry.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 }
 
 .chocolate {
+  background-color: #482514;
   background-image: url("../img/bg-chocolate.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
 }
 
 .gift-item .gift-button {
-  position: absolute;
-  bottom: 20px;
-  right: 24px;
+  margin-top: auto;
+  margin-left: auto;
+
+  padding: 11px 23px;
 }
 
 .catalog {
@@ -833,6 +868,10 @@ a.menu-busket-active {
   list-style: none;
 }
 
+.catalog-item-wrap {
+  position: relative;
+}
+
 .catalog-item {
   position: relative;
   box-sizing: border-box;
@@ -842,14 +881,14 @@ a.menu-busket-active {
   align-items: center;
 
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 39px;
 }
 
 .catalog-image {
   width: 267px;
   height: 267px;
 
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .hit {
@@ -861,7 +900,7 @@ a.menu-busket-active {
 .item-price {
   position: absolute;
   left: 0;
-  top: 165px;
+  top: 208px;
   margin: 0;
   padding: 0;
   z-index: 2;
@@ -873,6 +912,9 @@ a.menu-busket-active {
   font-size: 45px;
   font-weight: 700;
   line-height: 45px;
+
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-item-price .price-curency {
@@ -904,7 +946,7 @@ a.menu-busket-active {
 .item-title {
   display: block;
   width: 258px;
-  margin: 0;
+  margin: auto;
   
   font-size: 16px;
   line-height: 22px;
@@ -918,6 +960,11 @@ span.item-link {
   padding: 0;
   margin: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+span.item-link:hover {
+  color: #ffbc9e;
+  border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
 .catalog-item:hover .item-check {
@@ -1535,15 +1582,15 @@ a.contact-button:focus,
   
   text-align: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .page-link {
-  display: inline-block;
+  display: block;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #ffffff;
-  vertical-align: middle;
   margin-top: 5px;
 }
 
@@ -1560,6 +1607,21 @@ a.contact-button:focus,
   font-weight: 500;
 }
 
+.page-item:hover,
+.page-item:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.page-item:active{
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.page-link:active {
+  color: #323232;
+}
+
 .page-switch-left {
   display: block;
   background-image: url("../img/paginator-left.svg");
@@ -1567,6 +1629,7 @@ a.contact-button:focus,
   width: 7px;
   height: 12px;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .page-switch-right {
@@ -1576,6 +1639,7 @@ a.contact-button:focus,
   width: 7px;
   height: 12px;
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .disabled {
@@ -1705,15 +1769,14 @@ select.sort-list {
   border: none;
 }
 
-.sort-list:hover,
-.sort-list:focus {
+.sort-list:hover {
   background-image: url("../img/icon-down-dir-black.svg");
   background-repeat: no-repeat;
   background-size: 8px 5px;
   background-position-x: 170px;
   background-position-y: center;
   color: #000000;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
   overflow: hidden;
 }
 
@@ -1749,9 +1812,10 @@ select.sort-list {
 }
 
 .range-controls .bar {
-  width: 70%;
+  width: 50%;
   height: 4px;
   background: #f8f7f4;
+  margin-left: 20%;
 }
 
 .range-controls .toggle {
@@ -1778,11 +1842,11 @@ select.sort-list {
 }
 
 .price-controls {
-  display: block;
+  display: flex;
+  justify-content: flex-start; 
   padding: 0;
   margin: 0;
   margin-bottom: 7px;
-  margin-top: -4px;
 }
 
 .price-controls label {
@@ -1795,13 +1859,20 @@ select.sort-list {
 }
 
 label.min-price {
+  padding: 0;
   padding-left: 15px;
+  margin: 0;
+}
+
+label.max-price {
+  padding: 0;
+  margin: 0;
 }
 
 .price-controls input {
-  width: 60px;
-  padding: 0;
-  
+  width: 55px;
+  padding: 0 3px;
+  margin: 0;
   font-family: "Roboto", Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 500;
@@ -1815,8 +1886,9 @@ label.min-price {
 .fatty {
   display: flex;
   flex-wrap: wrap;
-  width: 415px;
+  width: 417px;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .fatty-items {
@@ -1828,8 +1900,9 @@ label.min-price {
   height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
-  padding: 0 15px;
-  vertical-align: middle;
+  padding: 0;
+  padding-left: 14px;
+  padding-right: 17px;
   align-items: center;
 }
 
@@ -1840,7 +1913,7 @@ label.min-price {
   font-weight: 500;
   line-height: 16px;
 
-  padding-left: 15px;
+  padding-left: 14px;
   margin:0;
   margin-bottom: 7px;
 }
@@ -1848,7 +1921,7 @@ label.min-price {
 .fatty-radio {
   position: relative;
 
-  padding-left: 30px;
+  padding-left: 32px;
   font-size: 16px;
   font-weight: 500;
 
@@ -1877,6 +1950,32 @@ label.min-price {
   opacity: 0.8;
 }
 
+.fatty-radio input[type="radio"]:hover + .radio-indicator {
+  border: 4px solid #ffffff;
+}
+
+.fatty-radio input[type="radio"]:active + .radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+  opacity: 1;
+}
+
+.fatty-radio input[type="radio"]:checked:hover + .radio-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../img/radio-checked.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: center;
+  opacity: 1;
+}
+
 .filler {
   display: flex;
   flex-wrap: wrap;
@@ -1893,9 +1992,9 @@ label.min-price {
   height: 36px;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
-  padding-top: 0;
-  padding-left: 15px;
-  padding-right: 16px;
+  padding: 0;
+  padding-left: 17px;
+  padding-right: 19px;
   
   align-items: center;
 }
@@ -1909,13 +2008,13 @@ label.min-price {
 
   padding-left: 15px;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 7px;
 }
 
 .filler-checkbox {
   position: relative;
   padding: 0;
-  padding-left: 34px;
+  padding-left: 33px;
   font-size: 16px;
   font-weight: 500;
 
@@ -1927,7 +2026,7 @@ label.min-price {
   top: 0;
   left: 0;
   width: 22px;
-  height: 22px;
+  height: 20px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-size: 20px 20px;
@@ -1937,15 +2036,29 @@ label.min-price {
 
 .filler-checkbox input[type="checkbox"]:focus + .checkbox-indicator,
 .filler-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-
   background-image: url("../img/checkbox-on.svg");
   background-repeat: no-repeat;
   background-size: 22px 20px;
   background-position: left top;
   opacity: 0.8;
+  border: none;
+}
+
+.filler-checkbox input[type="checkbox"]:hover + .checkbox-indicator {
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: left top;
+  opacity: 1;
+}
+
+.filler-checkbox input[type="checkbox"]:checked:hover + .checkbox-indicator {
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: 22px 20px;
+  background-position: left top;
+
+  opacity: 1;
   border: none;
 }
 
@@ -1964,10 +2077,21 @@ label.min-price {
   font-weight: 500;
 }
 
-.filter-button{
+.filter-button {
   width: 144px;
   height: 36px;
   margin-top: auto;
+}
+
+.filter-button input:hover {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.filter-button input:active {
+  color: #323232;
+  background-color: #ededed;
+  box-shadow: inset 0 2px 1px #696969;
 }
 
 @keyframes bounce {
@@ -2014,7 +2138,21 @@ label.min-price {
   position: fixed;
   display: none;
   color: #323232;
+}
 
+.modal::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.modal-wrap {
+  position: relative;
+  padding: 27px;
   background-color: #f8f7f4;
   border-radius: 15px;
 }
@@ -2033,7 +2171,6 @@ label.min-price {
   left: 50%;
 
   width: 478px;
-  padding: 27px;
 
   margin-left: -266px;
   z-index: 3;
@@ -2048,7 +2185,6 @@ label.min-price {
   height: 22px;
 
   font-size: 0;
-
   background-color: transparent;
   border: 0;
 
@@ -2058,14 +2194,12 @@ label.min-price {
 .modal-close::before,
 .modal-close::after {
   content: "";
-
   position: absolute;
   top: 10px;
   left: 2px;
 
   width: 19px;
   height: 3px;
-
   background-color: #1f191a;
 }
 
@@ -2114,6 +2248,7 @@ label.min-price {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  resize: none;
   padding: 10px 15px;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -2125,8 +2260,15 @@ label.min-price {
   margin-left: auto;
 }
 
-.popup-form input:focus,
+.popup-form input[type="text"]:hover,
+.popup-form input[type="email"]:hover,
+.popup-form textarea:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+}
+
+.popup-form input[type="text"]:focus,
+.popup-form input[type="email"]:focus,
 .popup-form textarea:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px rgba(46, 136, 228, 0.5);
+  border: 2px solid rgba(46, 136, 228, 0.5);
 }
