@@ -429,14 +429,12 @@ span.item-text {
 }
 
 .search-form  input:hover,
-.login-form input:hover,
 .subscribe-form input:hover {
   border: 2px solid rgba(154, 154, 154, 0.5);
   padding: 14px;
 }
 
 .search-form input:focus,
-.login-form input:focus,
 .subscribe-form input:focus {
   outline: none;
   border: 2px solid rgba(46, 136, 228, 0.5);
@@ -545,17 +543,34 @@ span.item-text {
   justify-content: space-between;
   box-sizing: border-box;
   width: 277px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 16px;
+  padding-bottom: 20px;
   
   background-color: #f8f7f4;
   cursor: pointer;
 }
 
+.login-form input:hover {
+  border: 2px solid rgba(154, 154, 154, 0.5);
+  padding: 14px;
+  padding-bottom: 12px;
+}
+
+.login-form input:focus {
+  outline: none;
+  border: 2px solid rgba(46, 136, 228, 0.5);
+  padding: 14px;
+  padding-bottom: 12px;
+}
+
 .login-form input {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   padding: 15px;
+  padding-bottom: 13px;
   border-radius: 5px;
   border: 1px solid #d3d3d2;
 
@@ -567,6 +582,8 @@ span.item-text {
   flex-wrap: wrap;
   box-sizing: border-box;
   width: 120px;
+  margin: 0;
+  padding: 0;
 }
 
 .link-title:hover {
@@ -575,19 +592,19 @@ span.item-text {
 }
 
 .link-title {
+  display: inline;
   text-decoration: none;
   font-size: 13px;
-  line-height: 24px;
   color: #323232;
 
   margin: 0;
   padding: 0;
-
   border-bottom: 1px solid rgba(00,00,00, 0.2);
 }
 
 .login-form-button {
-  padding: 15px 25px;
+  padding: 0 25px;
+  height: 44px;
 }
 
 .busket {
@@ -696,6 +713,26 @@ a.menu-busket-active {
   margin-bottom: 16px;
   border-bottom: 1px solid #cacac7;
   border-collapse: collapse; 
+}
+
+.busket-delete {
+  width: 25px;
+}
+
+.busket-img{
+  width: 45px;
+}
+
+.busket-title{
+  width: 256px;
+}
+
+.busket-weight{
+  width: 125px;
+}
+
+.busket-total{
+  width: 69px;
 }
 
 .table-list {
