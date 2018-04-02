@@ -5,7 +5,7 @@ var form = popup.querySelector("form");
 var login = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var isStorageSupport = true;
-  var storage = "";
+var storage = "";
 
   try {
     storage = localStorage.getItem("login");
@@ -54,7 +54,7 @@ var isStorageSupport = true;
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("modal-error");
     } else {
-      if (isStorageSupport) {
+    if (isStorageSupport) {
         localStorage.setItem("login", name.value);
       }
     }
@@ -63,7 +63,7 @@ var isStorageSupport = true;
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (popup.classList.contains("modal-show")) {
+    if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
       }
