@@ -795,19 +795,11 @@ a.menu-busket-active {
 .busket-items {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
   width: 540px;
   margin: 0;
   padding: 20px 15px;
-
+  text-align: right;
   background-color: #ffffff;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 40px rgba(0,0,0,0.4);
@@ -815,9 +807,10 @@ a.menu-busket-active {
 }
 
 .busket-table {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   border-bottom: 1px solid #cacac7;
   border-collapse: collapse; 
+  text-align: left;
 }
 
 .busket-delete {
@@ -845,15 +838,14 @@ a.menu-busket-active {
   line-height: 16px;
   font-weight: 400;
   color:#323232;
-  vertical-align: middle;
 
   margin: 0;
   padding: 0;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .table-item {
-  padding-bottom: 14px; 
+  padding-bottom: 15px; 
 }
 
 .busket-price {
@@ -880,15 +872,15 @@ a.menu-busket-active {
   font-size: 15px;
   font-weight: 700;
   color: #323232;
+  text-align: right;
 
-  margin-left: auto;
-  margin-bottom: 10px;
+  margin: 0;
+  margin-bottom: 9px;
 }
 
 .busket-button {
-  margin: 0;
-  margin-left: auto;
-  display: block;
+  display: inline-block;
+  vertical-align:  middle;
   padding: 12px 14px;
 }
 
@@ -960,9 +952,6 @@ a.menu-busket-active {
           flex-grow: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -ms-flex-preferred-size: 560px;
-      flex-basis: 560px;
-  min-height: 229px;
 
   padding-top: 17px;
   padding-left: 20px;
@@ -1759,25 +1748,21 @@ a.contact-button:focus,
           justify-content: flex-start;
 }
 
-.social-button {
-  display: block;
-  width: 32px;
-  height: 32px;
-
-  border: 3px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50%;
-  margin-right: 11px;
-}
-
 .social-button svg {
+  display: block;
   margin: 0;
   padding: 0;
 
   width: 32px;
   height: 32px;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+
+  margin-right: 11px;
 }
 
-.social-button:hover {
+.social-button svg:hover {
   width: 32px;
   height: 32px;
 
@@ -1785,7 +1770,7 @@ a.contact-button:focus,
   border-radius: 50%;
 }
 
-.social-button:focus path {
+.social-button svg:active path {
   fill: #e9e9e9;
   border: 3px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
@@ -2350,7 +2335,7 @@ label.max-price {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
-  margin-right: 15px;
+  margin-right: 17px;
   margin-bottom: 7px;
   cursor: pointer;
 }
@@ -2473,7 +2458,7 @@ label.max-price {
   font-weight: 500;
   
   margin: 0;
-  margin-right: 15px;
+  margin-right: 19px;
   margin-bottom: 7px;
   cursor: pointer;
 }
