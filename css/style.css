@@ -25,7 +25,7 @@ img {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(2%, #9db1a5), color-stop(98%, #849d8f));
   background-image: -webkit-linear-gradient(top, #9db1a5 2%, #849d8f 98%);
   background-image: -o-linear-gradient(top, #9db1a5 2%, #849d8f 98%);
-  background-image: linear-gradient(to bottom, #9db1a5 2%, #849d8f 98%)
+  background-image: linear-gradient(to bottom, #9db1a5 2%, #849d8f 98%);
 }
 
 .site-wrapper {
